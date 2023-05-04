@@ -7,7 +7,20 @@ import { Primary, Secondary } from "./NavItem";
 
 const Navbar = () => {
   return (
-    <nav className="bg-secondary flex flex-col items-start justify-start fixed gap-6 min-w-[15rem] min-h-screen p-6">
+    <nav
+    className="
+      bg-secondary
+      flex
+      flex-col
+      items-start
+      justify-start
+      fixed
+      gap-6
+      min-w-[15rem]
+      min-h-screen
+      p-6
+    "
+    >
       <div>
         <Image src={spotify} width={130} height={130} alt="logo" />
       </div>
