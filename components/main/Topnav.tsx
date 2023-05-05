@@ -12,12 +12,22 @@ interface topnavProps {
   name: string;
 }
 
-const Topnav: React.FC<topnavProps> = ({ name = "user" }) => {
+const Topnav: React.FC<topnavProps> = ({ name }) => {
   const [isOpen, setisOpen] = useState<boolean>(false);
 
   const onclickHandler = () => {
     setisOpen(!isOpen);
   };
+
+  if (typeof window == "object") {
+    document.addEventListener("click", (event: any) => {
+      if (event.target !== null) {
+        if (event.target.id !== "usermenu") {
+          setisOpen(false);
+        }
+      }
+    });
+  }
 
   return (
     <nav
@@ -86,6 +96,7 @@ const Topnav: React.FC<topnavProps> = ({ name = "user" }) => {
         </button>
         <div
           onClick={onclickHandler}
+          id="usermenu"
           className="
             flex
             items-center
@@ -103,6 +114,7 @@ const Topnav: React.FC<topnavProps> = ({ name = "user" }) => {
           "
         >
           <AiOutlineUser
+            id="usermenu"
             className="
               bg-minor
               text-2xl
@@ -111,25 +123,20 @@ const Topnav: React.FC<topnavProps> = ({ name = "user" }) => {
               p-1
             "
           />
-          <span className="text-md py-1">{name}</span>
+          <span id="usermenu" className="text-md py-1">
+            {name}
+          </span>
 
           {isOpen ? (
-            <IoMdArrowDropup
-              className="
-              text-2xl 
-              rounded-full 
-            "
-            />
+            <IoMdArrowDropup id="usermenu" className="text-2xl rounded-full" />
           ) : (
             <IoMdArrowDropdown
-              className="
-              text-2xl 
-              rounded-full 
-            "
+              id="usermenu"
+              className="text-2xl rounded-full"
             />
           )}
 
-          <Usermenu isOpen={isOpen} />
+          {isOpen && <Usermenu />}
         </div>
       </div>
     </nav>

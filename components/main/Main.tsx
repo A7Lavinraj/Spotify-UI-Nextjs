@@ -37,7 +37,7 @@ const Main = () => {
 
   return (
     <main className="ml-[15rem]">
-      <Topnav name="user" />
+      <Topnav name="__Levo" />
       <h2 className="text-white text-3xl font-bold mx-8 my-4">{message}</h2>
     </main>
   );

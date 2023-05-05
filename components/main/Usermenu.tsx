@@ -1,20 +1,15 @@
-interface usermenuProps {
-  isOpen: any;
-}
-
-const Usermenu: React.FC<usermenuProps> = ({ isOpen }) => {
+const Usermenu = () => {
   return (
     <div
-      className={`
+      className="
         bg-secondary
-        p-4
+        p-2
         min-w-[12rem]
         absolute 
         top-10 
         right-1
         rounded-lg
-        ${isOpen ? "block animate-popup" : "hidden scale-0"}
-      `}
+      "
     >
       <ul
         className="
@@ -22,7 +17,7 @@ const Usermenu: React.FC<usermenuProps> = ({ isOpen }) => {
           flex-col
           items-start
           justify-center
-          gap-4
+          gap-2
           text-sm
         "
       >
