@@ -89,7 +89,6 @@ const Topnav: React.FC<topnavProps> = ({ name }) => {
             duration-100
             hover:border-white
             hover:border-2
-            hover:scale-105
           "
         >
           Upgrade
@@ -108,6 +107,7 @@ const Topnav: React.FC<topnavProps> = ({ name }) => {
             duration-300
             hover:bg-minor
             relative
+            z-10
             scale-110
             cursor-pointer
             group

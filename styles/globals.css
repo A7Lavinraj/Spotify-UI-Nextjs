@@ -9,3 +9,9 @@
     @apply bg-primary font-['Poppins'];
   }
 }
+
+body,
+html,
+:root {
+  height: 100%;
+}

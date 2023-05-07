@@ -1,14 +1,15 @@
 import Image from "next/image";
-import spotify from "@/assets/spotify.svg";
+import spotify from "@/images/spotify.svg";
 import { AiFillHome, AiOutlineSearch, AiFillHeart } from "react-icons/ai";
 import { BiLibrary } from "react-icons/bi";
 import { GrAdd } from "react-icons/gr";
 import { Primary, Secondary } from "./NavItem";
+import { NavListItem } from "../Playlist/PlaylistItem";
 
 const Navbar = () => {
   return (
     <nav
-    className="
+      className="
       bg-secondary
       flex
       flex-col
@@ -43,6 +44,7 @@ const Navbar = () => {
         />
       </div>
       <hr className="w-full h-px border-none bg-minor" />
+      <NavListItem title="Mind Maker" />
     </nav>
   );
 };

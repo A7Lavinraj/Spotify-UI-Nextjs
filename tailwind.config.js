@@ -15,6 +15,9 @@ module.exports = {
         secondary: "#000000",
         minor: "#333333",
       },
+      backgroundImage: {
+        img: "url('/images/poster.webp')",
+      },
     },
   },
   plugins: [],
