@@ -10,8 +10,8 @@ interface feedProps {
 
 const Feed: React.FC<feedProps> = ({ feedtitle }) => {
   return (
-    <div className="mx-8">
-      <h2 className="text-white tracking-wide text-3xl my-4">{feedtitle}</h2>
+    <div className="mx-8 my-12">
+      <h2 className="text-white tracking-wide text-3xl my-2">{feedtitle}</h2>
       <div className="flex items-center justify-start gap-8">
         <FeedItem title="Walkerverse" discription="Feel it" image={aw} />
         <FeedItem title="smile" discription="Just smile" image={sm} />

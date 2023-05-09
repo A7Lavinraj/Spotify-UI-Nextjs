@@ -6,7 +6,12 @@ import { GrAdd } from "react-icons/gr";
 import { Primary, Secondary } from "./NavItem";
 import { NavListItem } from "../Playlist/PlaylistItem";
 
-const Navbar = () => {
+interface navbarProps {
+  state?: any;
+  setstate?: any;
+}
+
+const Navbar: React.FC<navbarProps> = ({ setstate }) => {
   return (
     <nav
       className="
@@ -26,9 +31,24 @@ const Navbar = () => {
         <Image src={spotify} width={130} height={130} alt="logo" />
       </div>
       <div>
-        <Primary title="Home" Icon={AiFillHome} color="white" />
-        <Primary title="Search" Icon={AiOutlineSearch} color="white" />
-        <Primary title="Your Library" Icon={BiLibrary} color="white" />
+        <Primary
+          title="Home"
+          Icon={AiFillHome}
+          color="white"
+          setstate={setstate}
+        />
+        <Primary
+          title="Search"
+          Icon={AiOutlineSearch}
+          color="white"
+          setstate={setstate}
+        />
+        <Primary
+          title="Your Library"
+          Icon={BiLibrary}
+          color="white"
+          setstate={setstate}
+        />
       </div>
       <div>
         <Secondary

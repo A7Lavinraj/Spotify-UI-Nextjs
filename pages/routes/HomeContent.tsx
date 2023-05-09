@@ -1,9 +1,10 @@
-import Topnav from "@/components/main/Topnav";
 import MainPlaylist from "@/components/Playlist/MainPlaylist";
 import Feed from "@/components/feeds/Feed";
+import Navbar from "@/components/navbar/Navbar";
+import Topnav from "@/components/navbar/Topnav";
 import { useState } from "react";
 
-const Home = () => {
+const Main = () => {
   const [message, setmessage] = useState<string>("");
 
   const date = new Date();
@@ -38,13 +39,12 @@ const Home = () => {
   greet();
 
   return (
-    <div>
+    <>
       <Topnav name="__Levo" />
-      <h2 className="text-white text-3xl font-bold mx-8 my-4">{message}</h2>
       <MainPlaylist />
       <Feed feedtitle="New to you" />
-    </div>
+    </>
   );
 };
 
-export default Home;
+export default Main;

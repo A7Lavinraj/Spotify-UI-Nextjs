@@ -1,8 +1,23 @@
 import Head from "next/head";
 import Navbar from "@/components/navbar/Navbar";
-import Main from "@/components/main/Main";
+import HomeContent from "./routes/HomeContent";
+import SearchContent from "./routes/SearchContent";
+import LibraryContent from "./routes/LibraryContent";
+import { useState } from "react";
+import Layout from "@/components/Layout";
 
 const Home = () => {
+  const [route, setroute] = useState<string>("Home");
+  let component: React.ReactNode = <HomeContent />;
+
+  if (route === "Home") {
+    component = <HomeContent />;
+  } else if (route === "Search") {
+    component = <SearchContent />;
+  } else if (route === "Your Library") {
+    component = <LibraryContent />;
+  }
+
   return (
     <div>
       <Head>
@@ -12,8 +27,8 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <header>
-        <Navbar />
-        <Main />
+        <Navbar state={route} setstate={setroute} />
+        <Layout children={component} />
       </header>
     </div>
   );

@@ -1,4 +1,4 @@
-import Usermenu from "@/components/main/Usermenu";
+import Usermenu from "@/components/Usermenu";
 import {
   IoIosArrowBack,
   IoIosArrowForward,
