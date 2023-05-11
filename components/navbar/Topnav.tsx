@@ -5,14 +5,15 @@ import {
   IoMdArrowDropdown,
   IoMdArrowDropup,
 } from "react-icons/io";
-import { AiOutlineUser } from "react-icons/ai";
+import { AiOutlineSearch, AiOutlineUser } from "react-icons/ai";
 import { useState } from "react";
 
 interface topnavProps {
   name: string;
+  searchbar?: boolean;
 }
 
-const Topnav: React.FC<topnavProps> = ({ name }) => {
+const Topnav: React.FC<topnavProps> = ({ name, searchbar }) => {
   const [isOpen, setisOpen] = useState<boolean>(false);
 
   const onclickHandler = () => {
@@ -37,6 +38,7 @@ const Topnav: React.FC<topnavProps> = ({ name }) => {
         justify-between
         p-4
         mx-4
+        h-20
       "
     >
       <div
@@ -65,6 +67,25 @@ const Topnav: React.FC<topnavProps> = ({ name }) => {
             p-1
           "
         />
+
+        {searchbar && (
+          <div className="relative">
+            <AiOutlineSearch className="absolute top-2 right-6 text-2xl text-gray-600 placeholder:left-2" />
+            <input
+              placeholder="What do you want to listen to?"
+              className="
+                border-0
+                rounded-3xl
+                mx-2
+                pl-4
+                h-10
+                w-80
+                outline-0
+              "
+              type="text"
+            />
+          </div>
+        )}
       </div>
       <div
         className="

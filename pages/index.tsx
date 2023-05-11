@@ -2,7 +2,6 @@ import Head from "next/head";
 import Navbar from "@/components/navbar/Navbar";
 import HomeContent from "./routes/HomeContent";
 import SearchContent from "./routes/SearchContent";
-import LibraryContent from "./routes/LibraryContent";
 import { useState } from "react";
 import Layout from "@/components/Layout";
 
@@ -14,8 +13,6 @@ const Home = () => {
     component = <HomeContent />;
   } else if (route === "Search") {
     component = <SearchContent />;
-  } else if (route === "Your Library") {
-    component = <LibraryContent />;
   }
 
   return (

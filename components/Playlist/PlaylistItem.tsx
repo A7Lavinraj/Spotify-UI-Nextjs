@@ -24,11 +24,3 @@ export const MainListItem: React.FC<listitemProps> = ({ image, title }) => {
     </div>
   );
 };
-
-export const NavListItem: React.FC<listitemProps> = ({ title }) => {
-  return (
-    <div className="flex items-start justify-center text-gray-400 text-sm">
-      <h1>{title}</h1>
-    </div>
-  );
-};

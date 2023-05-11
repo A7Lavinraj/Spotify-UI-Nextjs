@@ -4,7 +4,6 @@ import { AiFillHome, AiOutlineSearch, AiFillHeart } from "react-icons/ai";
 import { BiLibrary } from "react-icons/bi";
 import { GrAdd } from "react-icons/gr";
 import { Primary, Secondary } from "./NavItem";
-import { NavListItem } from "../Playlist/PlaylistItem";
 
 interface navbarProps {
   state?: any;
@@ -43,14 +42,14 @@ const Navbar: React.FC<navbarProps> = ({ setstate }) => {
           color="white"
           setstate={setstate}
         />
-        <Primary
-          title="Your Library"
-          Icon={BiLibrary}
-          color="white"
-          setstate={setstate}
-        />
       </div>
       <div>
+        <Secondary
+          title="Your Library"
+          Icon={BiLibrary}
+          background="bg-white rounded-sm p-1"
+        />
+        <hr className="w-full h-px border-none bg-minor" />
         <Secondary
           title="Create Playlist"
           Icon={GrAdd}
@@ -63,8 +62,6 @@ const Navbar: React.FC<navbarProps> = ({ setstate }) => {
           background="bg-gradient-to-br from-violet-500 to-white p-1 rounded-sm"
         />
       </div>
-      <hr className="w-full h-px border-none bg-minor" />
-      <NavListItem title="Mind Maker" />
     </nav>
   );
 };
