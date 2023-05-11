@@ -21,19 +21,3 @@ export const Primary: React.FC<navItemProps> = ({ title, Icon, setstate }) => {
     </div>
   );
 };
-
-export const Secondary: React.FC<navItemProps> = ({
-  title,
-  Icon,
-  background,
-  color,
-}) => {
-  return (
-    <div className="flex items-end justify-start gap-4 my-4 text-gray-400 hover:text-white opacity-80 transition ease-in-out duration-300 hover:opacity-100">
-      <div className={`${background}`}>
-        <Icon color={color} />
-      </div>
-      <span className="text-sm font-semibold">{title}</span>
-    </div>
-  );
-};

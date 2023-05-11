@@ -1,4 +1,4 @@
-import { MainListItem } from "./PlaylistItem";
+import { MainListItem } from "@/components/PlaylistItem";
 import img1 from "@/images/img5.jpg";
 import img2 from "@/images/img6.jpeg";
 import img3 from "@/images/img3.jpg";

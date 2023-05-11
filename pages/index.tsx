@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Navbar from "@/components/navbar/Navbar";
+import Navbar from "@/components/navbar/Sidenav";
 import HomeContent from "./routes/HomeContent";
 import SearchContent from "./routes/SearchContent";
 import { useState } from "react";

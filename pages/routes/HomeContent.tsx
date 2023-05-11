@@ -1,6 +1,5 @@
-import MainPlaylist from "@/components/Playlist/MainPlaylist";
+import MainPlaylist from "@/components/Playlist";
 import Feed from "@/components/feeds/Feed";
-import Navbar from "@/components/navbar/Navbar";
 import Topnav from "@/components/navbar/Topnav";
 import { useState } from "react";
 

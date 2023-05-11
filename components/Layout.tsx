@@ -1,5 +1,3 @@
-import Navbar from "./navbar/Navbar";
-
 interface layoutProps {
   children: React.ReactNode;
 }
@@ -7,9 +5,7 @@ interface layoutProps {
 const Layout: React.FC<layoutProps> = ({ children }) => {
   return (
     <>
-      <div className="ml-[15rem] relative bg-center bg-cover h-screen">
-        {children}
-      </div>
+      <div className="ml-[18rem] h-screen">{children}</div>
     </>
   );
 };

@@ -12,7 +12,6 @@ const SearchContent = () => {
         <SearchRouteItem title="indie" color="bg-pink-400" />
         <SearchRouteItem title="pop" color="bg-blue-400" />
         <SearchRouteItem title="chart" color="bg-green-400" />
-        <SearchRouteItem title="telegu" color="bg-cyan-400" />
       </div>
     </div>
   );
