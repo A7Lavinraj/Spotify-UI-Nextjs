@@ -63,12 +63,9 @@ const Topnav: React.FC<topnavProps> = ({ name, searchbar }) => {
             text-black
             transparent
             bg-white
-            border
-            border-gray-400
             transition
             duration-100
-            hover:border-white
-            hover:border-2
+            hover:scale-105
           "
         >
           Upgrade
