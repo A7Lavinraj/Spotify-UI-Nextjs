@@ -25,7 +25,7 @@ const Home = () => {
       </Head>
       <header>
         <Navbar state={route} setstate={setroute} />
-        <Layout children={component} />
+        <Layout>{component}</Layout>
       </header>
     </div>
   );
